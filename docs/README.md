@@ -6,6 +6,15 @@ protocol meaning.
 
 ## Start here
 
+- [Current status and roadmap](current-status.md)
+  — capability matrix, strongest findings, blockers, driver readiness, and
+  ranked next work.
+- [Architecture and terminology](architecture.md)
+  — system layers, USB/message model, enrollment flow, data boundaries, and a
+  glossary for project terminology.
+- [Tooling guide](../tools/README.md)
+  — offline audits, privacy-safe PCAP analysis, mock-only models, and the
+  explicit boundaries around live hardware instrumentation.
 - [Latitude 7390 / `0a5c:5833` evidence record](evidence/latitude-7390-0a5c-5833.md)
   — tested hardware, validated lifecycle, failures, and recovery controls.
 - [Command and status reference](controlvault2-command-status-reference.md)

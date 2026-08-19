@@ -65,11 +65,15 @@ The 940-byte and 92-byte Windows commit replies differ by 848 bytes, making
 848 the strongest current candidate for the first commit's returned blob
 length. The protected content itself has not been published or interpreted.
 
-Start with the [documentation and evidence map](docs/README.md). The compact
-command/status dictionary is
+Start with the [current status and roadmap](docs/current-status.md), then use
+the [architecture and terminology guide](docs/architecture.md) and
+[documentation and evidence map](docs/README.md). The compact command/status
+dictionary is
 [docs/controlvault2-command-status-reference.md](docs/controlvault2-command-status-reference.md),
-and the device-specific record is
-[docs/evidence/latitude-7390-0a5c-5833.md](docs/evidence/latitude-7390-0a5c-5833.md).
+the device-specific record is
+[docs/evidence/latitude-7390-0a5c-5833.md](docs/evidence/latitude-7390-0a5c-5833.md),
+and runnable research utilities are indexed in the
+[tooling guide](tools/README.md).
 
 ## Safety and privacy boundary
 
@@ -92,9 +96,9 @@ Do not publish raw USB payloads from enrollment or verification. See
 ## Repository layout
 
 ```text
-docs/                       research notes, protocol reference, evidence map
+docs/                       status, architecture, protocol notes, evidence map
 docs/evidence/              bounded static/runtime evidence records
-tools/                      audits, tracers, mock coordinators, test harnesses
+tools/                      indexed audits, tracers, mock models, test harnesses
 tests/                      regression and safety-boundary tests
 ```
 
