@@ -1,0 +1,58 @@
+name: Hardware report
+description: Report a ControlVault2 device, laptop model, and reproducible behavior
+title: "[hardware]: "
+labels:
+  - hardware
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Do not attach proprietary binaries, raw fingerprint data, biometric templates, credentials, service tags, or unredacted USB payloads.
+  - type: input
+    id: model
+    attributes:
+      label: Dell model
+      placeholder: Latitude 7390
+    validations:
+      required: true
+  - type: input
+    id: usb_identity
+    attributes:
+      label: USB identity
+      description: Include VID:PID and relevant interface numbers; redact serial numbers.
+      placeholder: 0a5c:5833, interfaces 00/01/03
+    validations:
+      required: true
+  - type: textarea
+    id: environment
+    attributes:
+      label: Software environment
+      description: OS, kernel, libfprint/fprintd, vendor package, and firmware versions when known.
+    validations:
+      required: true
+  - type: textarea
+    id: procedure
+    attributes:
+      label: Exact procedure
+      description: Commands or bounded stage that was run.
+    validations:
+      required: true
+  - type: textarea
+    id: result
+    attributes:
+      label: Observed result
+      description: Include statuses, ordering, and redacted lengths rather than protected payload bytes.
+    validations:
+      required: true
+  - type: textarea
+    id: recovery
+    attributes:
+      label: Recovery behavior
+      description: State after close/reset/reboot/full power removal.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Publication check
+      options:
+        - label: I removed biometric data, credentials, serials, service tags, user paths, and proprietary binaries.
+          required: true

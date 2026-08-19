@@ -1,0 +1,51 @@
+name: Research finding
+description: Submit a reproducible runtime or static-analysis finding
+title: "[research]: "
+labels:
+  - research
+body:
+  - type: dropdown
+    id: evidence_class
+    attributes:
+      label: Evidence class
+      options:
+        - Runtime observation
+        - Static binary analysis
+        - Cross-session inference
+        - Hypothesis for a bounded experiment
+    validations:
+      required: true
+  - type: textarea
+    id: artifact
+    attributes:
+      label: Hardware or artifact identity
+      description: Device/model or filename, version, architecture, and SHA-256. Do not upload proprietary files.
+    validations:
+      required: true
+  - type: textarea
+    id: finding
+    attributes:
+      label: Finding
+      description: Separate direct observations from interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Reproduction
+      description: Exact offsets, signatures, commands, or privacy-safe trace steps.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternative explanations and unknowns
+    validations:
+      required: true
+  - type: checkboxes
+    id: publication
+    attributes:
+      label: Publication check
+      options:
+        - label: This report contains no protected biometric payloads, credentials, keys, personal identifiers, or proprietary binaries.
+          required: true
